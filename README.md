@@ -1,5 +1,7 @@
 Miwok App
 ===================================
+根据Udacity一步一步完成的Miwok项目
+Gradle用的是7.0.3
 
 This app displays lists of vocabulary words for the user to learn the Miwok language.
 Used in a Udacity course in the Beginning Android Nanodegree.
