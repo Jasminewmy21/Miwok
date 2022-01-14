@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:background="@color/tan_background"
+    android:minHeight="@dimen/list_item_height"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height" />
+
+    <LinearLayout
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/image"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <!--
+        android:textSize="?android:textAppearanceMedium",
+        这一句使点击每一个分类activity时候crash
+        -->
+        <TextView
+            android:id="@+id/miwok_text_view"
+            style="@style/wordFontStyle"
+            android:gravity="bottom"
+            android:textStyle="bold"
+            tools:text="Miwok" />
+
+        <TextView
+            android:id="@+id/default_text_view"
+            style="@style/wordFontStyle"
+            android:gravity="top"
+            tools:text="Default" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/play_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_play_arrow_white_36dp" />
+
+    <!--方法一：在列表项布局中，添加一个新的视图并覆盖 RelativeLayout中的所有其他视图
+        并与该 RelativeLayout 的宽度和高度相匹配。
+        该视图的背景为 "?android:attr/selectableItemBackground”
+        这样默认情况下，该视图将为透明的 使你能够看到列表项中的内容。
+        当列表项被点击时，它将显示按下状态
+        (在 Lollipop 及更改版本的设备上显示灰色涟漪动画效果)-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:selectableItemBackground"/>
+
+</RelativeLayout>

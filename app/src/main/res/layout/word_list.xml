@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:drawSelectorOnTop="true"
+    android:numColumns="@android:integer/status_bar_notification_info_maxnum"
+    android:orientation="vertical">
+    <!--方法二：
+        不再向布局中添加新的视图，而是在单词列表布局中
+        对ListView XML 元素添加 android:drawSelectorOnTop="true"属性。-->
+
+</ListView>
